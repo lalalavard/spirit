@@ -558,14 +558,13 @@
         .item{
             width:20%;
             text-align: center;
-
+        
             .thumb{
-                border-radius: 100%;
                 overflow:hidden;
                 margin-bottom:1.5em;
 
                 img{
-                    width:40%;
+                    width:50%;
                 }
 
                 transition:all linear .3s;
@@ -581,40 +580,56 @@
                     font-family: OSBold;
                     font-size:1.3em;
                     text-transform: uppercase;
+                
                 }
 
                 .info{
                     font-family: OSLight;
+                    ;
                     
                 }
             }
         }
     }
-    @media screen and (max-width:1200px) {
-      
-    }
-    @media screen and (max-width:992px){
+
+    @media screen and (min-width:1200px){
         &{
             .list{
-                flex-wrap: wrap;
-
                 .item{
-                    width:100%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 2em;
-
                     .thumb{
-                        width:40%;
-                        border-radius: 3px;
-                        margin-bottom: 0;
-                        margin-right:1em;
+                       
                         flex-shrink: 1;
                     }
                 }
             }
         }
     }
+    @media screen and (max-width:992px){
+        &{
+            .list{
+                flex-wrap: wrap;
+                .item{
+
+                    width:100%;
+                    // display: flex;
+                    // justify-content: space-between;
+                    margin-bottom: 2em;
+
+                    .thumb{
+
+                        width:30%;
+                        margin-bottom: 0;
+                        margin-right:1em;
+                        //flex-shrink: 0; 下面修改
+                        flex-shrink: 0;
+                        margin: auto;
+
+                    }
+                }
+            }
+        }
+    }
+
 
     @media screen and (max-width:600px){
         &{
@@ -645,6 +660,7 @@
                 .item{
                     .thumb{
                         width:43%;
+                        flex-shrink: 0;
                     }
                 }
             }
@@ -657,6 +673,7 @@
 
    
 }
+
 
 
 /*clients */
